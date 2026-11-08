@@ -1,0 +1,266 @@
+/* =========================================
+   تصميم عصري داكن (Modern Dark Theme)
+   ========================================= */
+
+/* استيراد خطوط عصرية من جوجل */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Tajawal:wght@400;700&display=swap');
+
+/* التنسيق العام */
+body {
+    font-family: 'Tajawal', 'Cairo', sans-serif;
+    background-color: #0f172a; /* أزرق داكن جداً */
+    color: #e2e8f0; /* لون نص فاتح مريح للعين */
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    color: #38bdf8; /* لون أزرق سماوي نيون */
+    font-family: 'Cairo', sans-serif;
+    text-shadow: 0 2px 4px rgba(56, 189, 248, 0.2);
+}
+
+/* =========================================
+   الترويسة وقائمة التنقل (Header & Nav)
+   ========================================= */
+header {
+    background: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #1e293b;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+header h1 {
+    margin: 0 0 15px 0;
+    font-size: 28px;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav ul li a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #0f172a;
+    background-color: #38bdf8;
+    box-shadow: 0 0 15px rgba(56, 189, 248, 0.5);
+}
+
+/* =========================================
+   المحتوى الرئيسي (Main Content)
+   ========================================= */
+main {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #1e293b; /* لون البطاقة */
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    border: 1px solid #334155;
+}
+
+section {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #334155;
+}
+
+section:last-child {
+    border-bottom: none;
+}
+
+/* =========================================
+   الجداول (Tables)
+   ========================================= */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 20px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #334155;
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #334155;
+    border-left: 1px solid #334155;
+}
+
+th {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+    border-bottom: 2px solid #38bdf8;
+}
+
+tbody tr {
+    transition: background-color 0.3s ease;
+}
+
+tbody tr:hover {
+    background-color: #273449;
+}
+
+/* تنسيق صف التفاصيل */
+.details-row td {
+    background-color: #0f172a;
+    color: #94a3b8;
+    text-align: right;
+    font-size: 15px;
+    border-bottom: 2px solid #38bdf8;
+}
+
+/* =========================================
+   عناصر الإدخال والنماذج (Forms & Inputs)
+   ========================================= */
+fieldset {
+    border: 1px solid #334155;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 20px;
+    background-color: #0f172a;
+}
+
+legend {
+    background-color: #38bdf8;
+    color: #0f172a;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 16px;
+    box-shadow: 0 0 10px rgba(56, 189, 248, 0.4);
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    color: #94a3b8;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-family: inherit;
+    background-color: #1e293b;
+    color: #e2e8f0;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="date"]:focus,
+input[type="number"]:focus {
+    border-color: #38bdf8;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2);
+    background-color: #0f172a;
+}
+
+/* تنسيق مربعات الاختيار (Checkboxes) */
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: #38bdf8; /* يغير لون المربع */
+}
+
+/* =========================================
+   الأزرار (Buttons)
+   ========================================= */
+button {
+    background: linear-gradient(135deg, #8b5cf6, #6d28d9); /* تدرج بنفسجي */
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4);
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(139, 92, 246, 0.6);
+    background: linear-gradient(135deg, #7c3aed, #5b21b6);
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* =========================================
+   رسائل الخطأ والنجاح
+   ========================================= */
+.error-msg {
+    color: #f87171;
+    font-size: 14px;
+    display: none;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.success-msg {
+    color: #4ade80;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 20px;
+    padding: 15px;
+    background-color: rgba(74, 222, 128, 0.1);
+    border: 1px solid #4ade80;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(74, 222, 128, 0.2);
+}
+
+/* =========================================
+   التذييل (Footer)
+   ========================================= */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #0f172a;
+    color: #64748b;
+    border-top: 1px solid #1e293b;
+    margin-top: 40px;
+}

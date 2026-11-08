@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ar" lang="ar" dir="rtl">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>السيارات المتاحة - مكتب تأجير السيارات</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+
+    <!-- الترويسة وقائمة التنقل -->
+    <header>
+        <h1>مكتب تأجير السيارات</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">الرئيسية</a></li>
+                <li><a href="Cars.html">السيارات</a></li>
+                <li><a href="AboutUs.html">من نحن</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- محتوى الصفحة -->
+    <main>
+        <h2>السيارات المتاحة للتأجير</h2>
+        
+        <!-- الجدول المطلوب -->
+        <table class="cars-table" border="1">
+            <thead>
+                <tr>
+                    <th>الرمز</th>
+                    <th>الموديل</th>
+                    <th>سنة الصنع</th>
+                    <th>السعر اليومي</th>
+                    <th>إظهار التفاصيل</th>
+                    <th>اختيار</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- الصف الأول -->
+                <tr>
+                    <td>CR-001</td>
+                    <td>Toyota Corolla</td>
+                    <td>2023</td>
+                    <td>250000 ل.س</td>
+                    <td><input type="checkbox" class="details-checkbox" data-target="details-1" /></td>
+                    <td><input type="checkbox" class="select-checkbox" value="CR-001" data-price="250000" /></td>
+                </tr>
+                <!-- صف التفاصيل الإضافية للسيارة الأولى (مخفي افتراضياً) -->
+                <tr id="details-1" class="details-row" style="display: none;">
+                    <td colspan="6">
+                        <strong>تفاصيل إضافية:</strong> نوع الوقود: بنزين، ناقل الحركة: أوتوماتيك، عدد المقاعد: 5، عدد الكيلومترات: 15000 كم، اللون: أبيض.
+                    </td>
+                </tr>
+
+                <!-- الصف الثاني -->
+                <tr>
+                    <td>CR-002</td>
+                    <td>Kia Sportage</td>
+                    <td>2022</td>
+                    <td>400000 ل.س</td>
+                    <td><input type="checkbox" class="details-checkbox" data-target="details-2" /></td>
+                    <td><input type="checkbox" class="select-checkbox" value="CR-002" data-price="400000" /></td>
+                </tr>
+                <tr id="details-2" class="details-row" style="display: none;">
+                    <td colspan="6">
+                        <strong>تفاصيل إضافية:</strong> نوع الوقود: ديزل، ناقل الحركة: أوتوماتيك، عدد المقاعد: 5، عدد الكيلومترات: 20000 كم، اللون: رمادي.
+                    </td>
+                </tr>
+
+                <!-- الصف الثالث -->
+                <tr>
+                    <td>CR-003</td>
+                    <td>Hyundai Elantra</td>
+                    <td>2024</td>
+                    <td>300000 ل.س</td>
+                    <td><input type="checkbox" class="details-checkbox" data-target="details-3" /></td>
+                    <td><input type="checkbox" class="select-checkbox" value="CR-003" data-price="300000" /></td>
+                </tr>
+                <tr id="details-3" class="details-row" style="display: none;">
+                    <td colspan="6">
+                        <strong>تفاصيل إضافية:</strong> نوع الوقود: بنزين، ناقل الحركة: أوتوماتيك، عدد المقاعد: 5، عدد الكيلومترات: 5000 كم، اللون: أسود.
+                    </td>
+                </tr>
+
+                <!-- الصف الرابع -->
+                <tr>
+                    <td>CR-004</td>
+                    <td>Chevrolet Spark</td>
+                    <td>2021</td>
+                    <td>180000 ل.س</td>
+                    <td><input type="checkbox" class="details-checkbox" data-target="details-4" /></td>
+                    <td><input type="checkbox" class="select-checkbox" value="CR-004" data-price="180000" /></td>
+                </tr>
+                <tr id="details-4" class="details-row" style="display: none;">
+                    <td colspan="6">
+                        <strong>تفاصيل إضافية:</strong> نوع الوقود: بنزين، ناقل الحركة: عادي، عدد المقاعد: 4، عدد الكيلومترات: 30000 كم، اللون: أحمر.
+                    </td>
+                </tr>
+
+                <!-- الصف الخامس -->
+                <tr>
+                    <td>CR-005</td>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                    <td><input type="checkbox" class="details-checkbox" data-target="details-5" /></td>
+                    <td><input type="checkbox" class="select-checkbox" value="CR-005" data-price="0" /></td>
+                </tr>
+                <tr id="details-5" class="details-row" style="display: none;">
+                    <td colspan="6">
+                        <strong>تفاصيل إضافية:</strong> سيتم إضافة بيانات هذه السيارة قريباً.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- زر المتابعة -->
+        <div class="button-container">
+            <button type="button" id="continueBtn">متابعة</button>
+        </div>
+        
+        <!-- هذا القسم سيظهر لاحقاً عند الضغط على متابعة (نموذج الحجز) -->
+        <div id="bookingFormContainer" style="display: none;">
+            <form id="bookingForm" action="#" method="post">
+                <fieldset>
+                    <legend>نموذج حجز السيارة</legend>
+                    
+                    <!-- الاسم الكامل -->
+                    <label for="fullName">الاسم الكامل (بالعربية فقط):</label>
+                    <input type="text" id="fullName" name="fullName" />
+                    <span id="nameError" class="error-msg">الرجاء إدخال الاسم باللغة العربية فقط.</span>
+
+                    <!-- الرقم الوطني -->
+                    <label for="nationalId">الرقم الوطني (11 خانة، يبدأ بـ 01):</label>
+                    <input type="text" id="nationalId" name="nationalId" maxlength="11" />
+                    <span id="idError" class="error-msg">يجب أن يكون الرقم 11 خانة ويبدأ بـ 01.</span>
+
+                    <!-- تاريخ بداية التأجير -->
+                    <label for="startDate">تاريخ بداية التأجير:</label>
+                    <input type="date" id="startDate" name="startDate" />
+                    <span id="startDateError" class="error-msg">الرجاء اختيار تاريخ البداية.</span>
+
+                    <!-- تاريخ نهاية التأجير -->
+                    <label for="endDate">تاريخ نهاية التأجير:</label>
+                    <input type="date" id="endDate" name="endDate" />
+                    <span id="endDateError" class="error-msg">تاريخ النهاية يجب أن يكون بعد تاريخ البداية.</span>
+
+                    <!-- رقم الموبايل -->
+                    <label for="mobileNumber">رقم الموبايل (Syriatel أو MTN):</label>
+                    <input type="tel" id="mobileNumber" name="mobileNumber" />
+                    <span id="mobileError" class="error-msg">الرجاء إدخال رقم موبايل صحيح (يبدأ بـ 09).</span>
+
+                    <!-- البريد الإلكتروني -->
+                    <label for="email">البريد الإلكتروني:</label>
+                    <input type="email" id="email" name="email" />
+                    <span id="emailError" class="error-msg">الرجاء إدخال بريد إلكتروني صحيح.</span>
+
+                    <!-- زر الإرسال -->
+                    <div class="button-container">
+                        <button type="submit" id="submitBooking">إرسال</button>
+                    </div>
+                    
+                    <!-- رسالة نجاح (مخفية افتراضياً) -->
+                    <div id="successMessage" class="success-msg" style="display: none;">
+                        تم تأكيد حجزك بنجاح! شكراً لاختيارك مكتبنا.
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>جميع الحقوق محفوظة &copy; 2026 - مكتب تأجير السيارات</p>
+    </footer>
+
+    <!-- ربط مكتبة jQuery وملف الجافاسكريبت -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="myFunctions.js"></script>
+
+</body>
+</html>
